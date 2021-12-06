@@ -22,8 +22,8 @@
         public string LastName { get; set; }
         public string Email { get; private set; }
 
-        public List<CreditCard> CreditCards { get; set; }
-        public List<eCommerce.Domain.Countries.Address> Addresses { get; set; }
+        public List<CreditCard> CreditCards { get; }
+        public List<eCommerce.Domain.Countries.Address> Addresses { get; }
 
         public void ChangeEmail(string email)
         {
@@ -34,8 +34,11 @@
 
             Email = email;
 
-            eCommerce.Domain.Support.Events.DomainEvents.Raise<eCommerce.Domain.Customers.Events.CustomerChangedEmail>(
-                new eCommerce.Domain.Customers.Events.CustomerChangedEmail { Customer = this });
+            eCommerce.Domain.Support.Events.DomainEvents.Raise(
+                new eCommerce.Domain.Customers.Events.CustomerChangedEmail
+                {
+                    Customer = this
+                });
         }
 
         public static Customer Create(string firstname, string lastname, string email)
@@ -70,8 +73,10 @@
                     .IsSatisfiedBy).AsReadOnly();
         }
 
-        public void Add(CreditCard creditCard)
+        public void AddCard(string nameOnCard, string cardNumber, DateTime expiry)
         {
+            var creditCard = CreditCard.Create(this, nameOnCard, cardNumber, expiry);
+
             CreditCards.Add(creditCard);
 
             eCommerce.Domain.Support.Events.DomainEvents

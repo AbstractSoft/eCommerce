@@ -2,12 +2,12 @@
 {
     public class CreditCard : eCommerce.Domain.Support.Contracts.ValueObjects.ValueObject
     {
-        public virtual string NameOnCard { get; private init; }
-        public virtual string CardNumber { get; private init;}
-        public virtual bool Active { get; private init;}
-        public virtual System.DateTime Created { get; private init;}
-        public virtual System.DateTime Expiry { get; private init;}
-        public virtual Customer Customer { get; private init;}
+        public string NameOnCard { get; private init; }
+        public string CardNumber { get; private init; }
+        public bool Active { get; private init; }
+        public System.DateTime Created { get; private init; }
+        public System.DateTime Expiry { get; private init; }
+        public Customer Customer { get; private init; }
 
         public static CreditCard Create(Customer customer, string name, string cardNum, System.DateTime expiry)
         {
