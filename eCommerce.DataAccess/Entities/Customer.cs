@@ -14,7 +14,8 @@
             Addresses = new System.Collections.Generic.HashSet<Address>();
         }
 
-        [Key] public System.Guid ObjectId { get; set; }
+        [Key] 
+        public System.Guid ObjectId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }

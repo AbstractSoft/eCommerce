@@ -1,8 +1,12 @@
 namespace eCommerce.WebApi.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
+    using eCommerce.Domain.Customers;
+    using Microsoft.AspNetCore.Authorization;
+    using eCommerce.Application.Commands.Customer;
+    using System.Threading.Tasks;
 
-    [Microsoft.AspNetCore.Authorization.AuthorizeAttribute]
+    [Authorize]
     public class CustomersController : ApiControllerBase
     {
         private readonly MediatR.IMediator mediator;
@@ -13,10 +17,11 @@ namespace eCommerce.WebApi.Controllers
         }
 
         [HttpPost]
-        public async System.Threading.Tasks.Task<MediatR.Unit> Create(
-            eCommerce.Application.Commands.Customer.CreateCustomerCommand command)
+        public async Task<ActionResult> Create([FromBody] Customer customer)
         {
-            return await mediator.Send(command);
+            await mediator.Send(new CreateCustomerCommand(customer));
+            
+            return Ok();
         }
     }
 }

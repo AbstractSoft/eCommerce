@@ -1,6 +1,6 @@
 namespace eCommerce.Domain.Countries
 {
-    public abstract class Address:eCommerce.Domain.Support.Contracts.ValueObjects.ValueObject
+    public abstract class Address : eCommerce.Domain.Support.Contracts.ValueObjects.ValueObject
     {
         protected override System.Collections.Generic.IEnumerable<object> GetAtomicValues()
         {

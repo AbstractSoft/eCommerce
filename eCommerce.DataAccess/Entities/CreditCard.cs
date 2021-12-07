@@ -8,8 +8,10 @@ namespace eCommerce.DataAccess.Entities
     [Table("CreditCard")]
     public class CreditCard
     {
-        [Key] public int Id { get; set; }
+        [Key] 
+        public int HashCode { get; set; }
 
+        [Key]
         public System.Guid AggregateId { get; set; }
 
         public string NameOnCard { get; set; }

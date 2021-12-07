@@ -12,7 +12,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Contracts" />
+      <ProjectReference Include="..\eCommerce.Domain\eCommerce.Domain.csproj" />
     </ItemGroup>
 
 </Project>

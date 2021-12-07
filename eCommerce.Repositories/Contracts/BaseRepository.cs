@@ -1,12 +1,13 @@
 ﻿namespace eCommerce.Persistence.Contracts
 {
+    using eCommerce.DataAccess.Contracts;
     public abstract class BaseRepository 
     {
-        protected BaseRepository(eCommerce.DataAccess.Contracts.IDataContext context)
+        protected BaseRepository(IDataContext context)
         {
             DataContext = context;
         }
 
-        public eCommerce.DataAccess.Contracts.IDataContext DataContext { get; }
+        public IDataContext DataContext { get; }
     }
 }

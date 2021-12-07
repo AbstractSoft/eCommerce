@@ -55,7 +55,12 @@
 
         protected override System.Collections.Generic.IEnumerable<object> GetAtomicValues()
         {
-            throw new System.NotImplementedException();
+            yield return NameOnCard;
+            yield return CardNumber;
+            yield return Active;
+            yield return Created;
+            yield return Expiry;
+            yield return Customer;
         }
 
         protected override FluentValidation.IValidator GetValidator()
