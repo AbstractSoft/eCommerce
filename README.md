@@ -1,4 +1,5 @@
-# eCommerce
+# Domain-Driven Design e-Commerce application draft in C#
+
 Sample Domain-Driven Design e-Commerce application draft for the four-part series of webinars:
 
 1. Introducing Domain-Driven Design
