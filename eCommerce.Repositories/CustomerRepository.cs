@@ -17,9 +17,12 @@
             this.dataContext = dataContext;
         }
 
-        public Task AddCustomerAsync(Customer customer)
+        public async Task AddCustomerAsync(Customer customer)
         {
-            
+            // Perform a mapping to the entities specific to the DB
+            // Fill data context with data
+            // save the changes
+            throw new System.NotImplementedException();
         }
 
         public async Task<System.Collections.Generic.IReadOnlyList<Customer>> GetAllCustomersAsync()
