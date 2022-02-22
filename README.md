@@ -13,3 +13,5 @@ Sample Domain-Driven Design e-Commerce application draft for the four-part serie
 1. Domain-Driven Design: A Focus On Software Architecture
 	- [recording](https://youtu.be/uwIrEaJDngo "recording")
 	- slides
+
+Soon, an e-book containing the essence of the webinars will be available!
