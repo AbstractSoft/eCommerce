@@ -13,6 +13,6 @@ Sample Domain-Driven Design e-Commerce application draft for the four-part serie
 	- [slides](https://github.com/AbstractSoft/eCommerce/blob/main/slides/S3.Domain-Driven%20Design_%20Modeling%20An%20E-Commerce%20App.pdf "slides")
 1. Domain-Driven Design: A Focus On Software Architecture
 	- [recording](https://youtu.be/uwIrEaJDngo "recording")
-	- [slides] (https://github.com/AbstractSoft/eCommerce/blob/main/slides/S4.Domain-Driven%20Design_%20A%20Focus%20On%20Software%20Architecture.pdf "slides")
+	- [slides](https://github.com/AbstractSoft/eCommerce/blob/main/slides/S4.Domain-Driven%20Design_%20A%20Focus%20On%20Software%20Architecture.pdf "slides")
 
 Soon, an e-book containing the essence of the webinars will be available!
